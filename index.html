@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Is G-Music</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <div class="logo">
+            <div class="logo-circulo"></div>
+            <span>G-Music</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#equipos">Equipos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#formatos">Formatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="etiqueta-res">
+                <span>Audio de Alta Resolución</span>
+            </div>
+            <h1>Experimenta el Sonido en su Forma Más Pura</h1>
+            <p>Descubre el universo del audio Hi-Fi y Hi-Res: sin compresión, sin pérdidas.</p>
+            <a href="formulario.html" class="btn-descubrir" style="display: inline-block; text-decoration: none;">Descubrir</a>
+        </section>
+
+        <section class="estadisticas">
+            <div class="stat-item">
+                <h2>192kHz</h2>
+                <p>Frecuencia máxima</p>
+            </div>
+            <div class="stat-item">
+                <h2>32bit</h2>
+                <p>Profundidad</p>
+            </div>
+            <div class="stat-item">
+                <h2>11.2MHz</h2>
+                <p>DSD256</p>
+            </div>
+            <div class="stat-item">
+                <h2>>96dB</h2>
+                <p>Rango dinámico</p>
+            </div>
+        </section>
+
+        <section id="equipos" class="seccion-equipos">
+            <div class="encabezado-seccion">
+                <span class="subtitulo-seccion">EQUIPOS ESENCIALES</span>
+                <h2>Herramientas para el Oyente Exigente</h2>
+            </div>
+            
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta">
+                    <span class="categoria-tarjeta">Reproductor DAP</span>
+                    <h3>HiBy R3 Pro Saber</h3>
+                    <p>Reproductor de audio portátil de alta resolución con DAC ES9219C cuádruple.</p>
+                    <ul class="lista-especificaciones">
+                        <li><span>DAC</span> <span>ES9219C x 4</span></li>
+                        <li><span>Formatos</span> <span>DSD256 / MQA / FLAC</span></li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <span class="categoria-tarjeta">DAC de Escritorio</span>
+                    <h3>iFi Audio Uno</h3>
+                    <p>DAC/Amp de escritorio compacto con tecnología BitPerfect.</p>
+                    <ul class="lista-especificaciones">
+                        <li><span>PCM</span> <span>Hasta 384 kHz</span></li>
+                        <li><span>DSD</span> <span>DSD256 nativo</span></li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <span class="categoria-tarjeta">Receptor A/V</span>
+                    <h3>Pioneer VSX-821</h3>
+                    <p>Receptor A/V de 7 canales con decodificación Dolby TrueHD.</p>
+                    <ul class="lista-especificaciones">
+                        <li><span>Canales</span> <span>7.1</span></li>
+                        <li><span>Potencia</span> <span>110 W x 7</span></li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <span class="categoria-tarjeta">Receptor A/V</span>
+                    <h3>Denon AVR-X1200W</h3>
+                    <p>Receptor con soporte 4K Ultra HD, Dolby Atmos y DTS:X.</p>
+                    <ul class="lista-especificaciones">
+                        <li><span>Canales</span> <span>7.2</span></li>
+                        <li><span>Audio</span> <span>Dolby Atmos / DTS:X</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+<!-- Carrusel de Imagenes-->
+</div>
+        </section> 
+        <section id="galeria" class="seccion-galeria">
+            <div class="encabezado-seccion" style="text-align: center;">
+                <span class="subtitulo-seccion">GALERÍA</span>
+                <h2>Nuestros Equipos en Acción</h2>
+            </div>
+            
+            <div class="carousel">
+                <div class="group">
+                    <div class="card"><img src="imagenes/galeria1.jpg" alt="Imagen 1"></div>
+                    <div class="card"><img src="imagenes/galeria2.jpg" alt="Imagen 2"></div>
+                    <div class="card"><img src="imagenes/galeria3.jpg" alt="Imagen 3"></div>
+                </div>
+                <div aria-hidden="true" class="group">
+                    <div class="card"><img src="imagenes/galeria1.jpg" alt="Imagen 1"></div>
+                    <div class="card"><img src="imagenes/galeria2.jpg" alt="Imagen 2"></div>
+                    <div class="card"><img src="imagenes/galeria3.jpg" alt="Imagen 3"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seccion de Formatos -->
+        <section id="formatos" class="seccion-formatos">
+            <div class="columna-izquierda">
+                <h2>¿Qué Escuchas<br>Realmente?</h2>
+                <ul class="menu-formatos" id="menu-formatos">
+                    <li class="formato-item">FLAC (Lossless)</li>
+                    <li class="formato-item">DSD (Direct Stream Digital)</li>
+                    <li class="formato-item">MQA (Master Quality)</li>
+                    <li class="formato-item activo">MP3 / AAC (Compresión)</li>
+                </ul>
+            </div>
+            
+            <div class="columna-derecha">
+                <div class="detalle-formato" id="detalle-formato">
+                    <h3>MP3 / AAC</h3>
+                    <p>Compresión con pérdida. Práctico pero descarta detalles para sistemas Hi-Fi.</p>
+                    
+                    <div class="barra-contenedor">
+                        <div class="etiquetas-barra">
+                            <span>Fidelidad</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="barra-fondo">
+                            <div class="barra-progreso" style="width: 42%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="barra-contenedor">
+                        <div class="etiquetas-barra">
+                            <span>Compatibilidad</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="barra-fondo">
+                            <div class="barra-progreso" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  <footer>
+        <div class="footer-columna brand">
+            <h3>G-Music</h3>
+            <p>Dedicados a la escucha crítica y la alta fidelidad.</p>
+        </div>
+        
+        <div class="footer-columna links">
+            <h4>Explorar</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="formulario.html">Registro</a></li>
+                <li><a href="https://static.wixstatic.com/media/e6f56d_a2b47380e8504300bfb2844e4a8a5159~mv2.gif">Easter Egg</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-columna links">
+            <h4>Documentacion Técnica</h4>
+            <ul>
+                <li><a href="https://manuals.denon.com/AVRX1200W/EU/ES/index.php">Denon AVR-X1200W</a></li>
+                <li><a href="https://ifi-audio.com/es/products/uno?srsltid=AfmBOooGaef1kGc-hAPYBIMQu04kZBM8v5l2y9VcnRiaiDywN6q1j89n">iFi Uno</a></li>
+                <li><a href="https://store.hiby.com/pages/hiby-r3-pro-saber-2022-audio-componentry?srsltid=AfmBOor-5DGBlYKJB4MCe7yzPzdgxUzO6dWOCHJGy3yFK1LzJONsO8wf">Hiby R3 Pro Saber</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

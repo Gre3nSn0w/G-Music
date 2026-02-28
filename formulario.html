@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro G-Music</title>
+    <style>
+        /* --- CSS INTEGRADO --- */
+        :root {
+            --fondo-principal: #121212;
+            --fondo-secundario: #1a1a1a;
+            --color-texto: #e0e0e0;
+            --color-texto-mutado: #999;
+            --dorado: #d1a65d;
+            --dorado-oscuro: #9c7b42;
+            --fuente-titulos: 'Georgia', serif;
+            --fuente-texto: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--fondo-principal);
+            color: var(--color-texto);
+            font-family: var(--fuente-texto);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        /* --- CONTENEDOR DEL FORMULARIO --- */
+        .contenedor-registro {
+            background-color: var(--fondo-secundario);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo-contenedor {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: var(--fuente-titulos);
+            font-size: 2rem;
+            color: var(--dorado);
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        /* --- REDES SOCIALES --- */
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .redes-sociales img {
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .redes-sociales img:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- FORMULARIO --- */
+        .grupo-form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .grupo-form label {
+            flex: 0 0 35%;
+            font-size: 0.95rem;
+            color: var(--color-texto);
+        }
+
+        .grupo-form input[type="text"],
+        .grupo-form input[type="email"],
+        .grupo-form input[type="password"],
+        .grupo-form input[type="date"],
+        .grupo-form select {
+            flex: 0 0 60%;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 6px;
+            font-family: var(--fuente-texto);
+        }
+
+        .grupo-form input:focus,
+        .grupo-form select:focus,
+        .grupo-form textarea:focus {
+            outline: none;
+            border-color: var(--dorado);
+        }
+
+        /* Inputs especiales */
+        .grupo-form input[type="color"] {
+            background: none;
+            border: none;
+            cursor: pointer;
+            height: 40px;
+            width: 60px;
+        }
+
+        .grupo-radio {
+            flex: 0 0 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--color-texto-mutado);
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 6px;
+            resize: vertical;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- BOTONES --- */
+        .botones-accion {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-enviar {
+            background-color: var(--dorado);
+            color: #000;
+        }
+
+        .btn-enviar:hover {
+            background-color: #b58d4a;
+        }
+
+        .btn-cancelar {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #444;
+        }
+
+        .btn-crear {
+            width: 100%;
+            background-color: #2a2a2a;
+            color: var(--dorado);
+            border: 1px solid var(--dorado);
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-crear:hover {
+            background-color: var(--dorado);
+            color: #000;
+        }
+
+        .pie-pagina {
+            margin-top: 2rem;
+            color: var(--color-texto-mutado);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-registro">
+        <div class="logo-contenedor">
+            Registrate para pertenecer a G-Music
+        </div>
+
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/"><img src="imagenes/2.jpg" alt="Facebook" width="40" height="40"></a>
+            <a href="https://www.Google.com/"><img src="imagenes/3.jpg" alt="Google" width="40" height="40"></a>
+            <a href="https://www.playstation.com/es-mx/"><img src="imagenes/4.jpg" alt="Playstation" width="40" height="40"></a>
+            <a href="https://www.xbox.com/es-MX"><img src="imagenes/5.jpg" alt="Xbox" width="40" height="40"></a>
+            <a href="https://www.nintendo.com/es_LA/switch/system/"><img src="imagenes/6.jpg" alt="Switch" width="40" height="40"></a>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="grupo-form">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="Name" placeholder="Nombre" required>
+            </div>
+
+            <div class="grupo-form">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="email_control" placeholder="Email" required>
+            </div>
+
+            <div class="grupo-form">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" id="usuario" name="User_Name" placeholder="Tu nombre de usuario" required>
+            </div>
+
+            <div class="grupo-form">
+                <label for="pass">Contraseña:</label>
+                <input type="password" id="pass" name="pass" placeholder="******" required>
+            </div>
+
+            <div class="grupo-form">
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha" name="date_control">
+            </div>
+
+            <div class="grupo-form">
+                <label for="pais">País donde vives:</label>
+                <select id="pais" name="menu">
+                    <option value="0" selected>Selecciona una opción</option>
+                    <option value="1">México</option>
+                    <option value="2">Alemania</option>
+                    <option value="3">Estados Unidos</option>
+                    <option value="other">Japón</option>
+                </select>
+            </div>
+
+            <div class="grupo-form">
+                <label for="color">Color de Perfil:</label>
+                <input type="color" id="color" name="color_control" value="#d1a65d">
+            </div>           
+
+            <div class="grupo-form">
+                <label>Sexo:</label>
+                <div class="grupo-radio">
+                    <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                    <label><input type="radio" name="sexo" value="femenino"> Femenino</label>
+                    <label><input type="radio" name="sexo" value="indistinto"> Prefiero no decirlo...</label>
+                </div>
+            </div>
+            <br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="noticias" checked>
+                <label for="noticias">Acepto proporcionar mis datos para el registro de mi cuenta.</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terminos" checked required>
+                <label for="terminos">Deseo recibir promociones exclusivas a mi correo.</label>
+            </div>
+
+            <textarea name="texto" rows="4" placeholder="Escribe cómo podríamos mejorar esta interfaz."></textarea>
+
+            <div class="botones-accion">
+                <input type="submit" class="btn btn-enviar" value="Enviar" onclick="alert('Mensaje enviado con exito')">
+                
+                <input type="reset" class="btn btn-cancelar" value="Cancelar" onclick="alert('Cuenta cancelada correctamente')">
+            </div>
+
+            <button type="button" class="btn-crear" onclick="alert('Cuenta creada con exito, revisa tu bandeja de entrada')">Crear cuenta</button>
+
+        </form>
+    </div>
+
+    <div class="pie-pagina">
+        &copy; 2026 Fernando Hernandez Llanos (GrE3nSn0w) - 8CV11
+    </div>
+
+</body>
+</html>

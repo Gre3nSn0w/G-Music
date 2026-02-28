@@ -1,0 +1,540 @@
+/* --- VARIABLES DE COLOR Y FUENTES --- */
+:root {
+    --fondo-principal: #121212;
+    --fondo-secundario: #1a1a1a;
+    --color-texto: #e0e0e0;
+    --color-texto-mutado: #ffffff;
+    --dorado: #d1a65d;
+    --dorado-oscuro: #9c7b42;
+    --fuente-titulos: 'Georgia', serif; 
+    --fuente-texto: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Hace que el desplazamiento entre enlaces sea fluido */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--fondo-secundario);
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dorado);
+}
+
+.logo-circulo {
+    width: 25px;
+    height: 25px;
+    background-color: var(--dorado);
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-mutado);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+/* --- SECCIÓN PRINCIPAL--- */
+.hero {
+    text-align: center;
+    padding: 6rem 1rem;
+    border-bottom: 1px solid #333;
+    
+    /* --- NUEVAS PROPIEDADES --- */
+    /* Imagen de fondo (reemplaza 'imagenes/mi_imagen_hero.jpg' con la ruta de tu imagen) */
+    background-image: 
+        /* Capa negra encima con opacidad (el 'blur' o filtro) al 75% */
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        /* Tu imagen de fondo debajo */
+        url('imagenes/audiop.jpg');
+    background-size: cover;      /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; 
+}
+
+.etiqueta-res {
+    display: inline-block;
+    border: 1px solid var(--dorado-oscuro);
+    color: var(--dorado);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--color-texto-mutado);
+    margin-bottom: 2rem;
+}
+
+.btn-descubrir {
+    background-color: var(--dorado);
+    color: #000;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-descubrir:hover {
+    background-color: #b58d4a;
+}
+
+/* --- ESTADÍSTICAS --- */
+.estadisticas {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 5%;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--dorado);
+    font-size: 2.5rem;
+}
+
+.stat-item p {
+    color: var(--color-texto-mutado);
+    font-size: 0.85rem;
+}
+
+/* --- EQUIPOS (Grid) --- */
+.seccion-equipos {
+    padding: 5rem 5%;
+}
+
+.encabezado-seccion {
+    margin-bottom: 3rem;
+}
+
+.subtitulo-seccion {
+    color: var(--dorado);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.encabezado-seccion h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: var(--fondo-secundario);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.categoria-tarjeta {
+    color: var(--dorado);
+    font-size: 0.8rem;
+}
+
+.tarjeta h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.tarjeta p {
+    color: var(--color-texto-mutado);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.lista-especificaciones {
+    list-style: none;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+}
+
+.lista-especificaciones li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--color-texto-mutado);
+}
+
+.lista-especificaciones li span:last-child {
+    color: var(--color-texto);
+}
+
+/* --- FORMATOS INTERACTIVOS --- */
+.seccion-formatos {
+    display: flex;
+    padding: 5rem 5%;
+    gap: 5%;
+    border-top: 1px solid #333;
+}
+
+.columna-izquierda {
+    flex: 1;
+}
+
+.columna-izquierda h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.menu-formatos {
+    list-style: none;
+}
+
+.formato-item {
+    padding: 15px 20px;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--color-texto-mutado);
+    transition: all 0.3s;
+}
+
+.formato-item:hover {
+    border-color: var(--dorado-oscuro);
+}
+
+.formato-item.activo {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.columna-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalle-formato h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.detalle-formato p {
+    color: var(--color-texto-mutado);
+    margin-bottom: 2rem;
+}
+
+.barra-contenedor {
+    margin-bottom: 1.5rem;
+}
+
+.etiquetas-barra {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.barra-fondo {
+    background-color: #333;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    background-color: var(--dorado);
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- SECCIÓN GALERÍA (CARRUSEL INFINITO) --- */
+.seccion-galeria {
+    padding: 6rem 5%; 
+    border-top: 1px solid #333; /* Agregamos separador gris  */
+    border-bottom: 1px solid #333; 
+}
+
+.carousel {
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 1200px; /* Hace el contenedor más ancho */
+    overflow: hidden;
+    display: flex;
+}
+
+.group {
+    display: flex;
+    gap: 30px; /* separación entre las imágenes */
+    padding-right: 30px;
+    will-change: transform;
+    /* Redujimos la velocidad a 25s para compensar el tamaño más grande */
+    animation: scrolling 25s linear infinite; 
+}
+
+/* Pausa la animación al pasar el cursor */
+.carousel:hover .group {
+    animation-play-state: paused;
+}
+
+.card {
+    width: 450px; /* Tarjetas mucho más anchas (antes 280px) */
+    flex: 0 0 auto; 
+    background-color: var(--fondo-secundario);
+    border: 1px solid #333;
+    border-radius: 16px; /* Borde un poco más suave para tarjetas grandes */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada para darle profundidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Tarjetas más altas (antes 200px) */
+    overflow: hidden; 
+}
+
+/* Ajuste para que las imágenes no se deformen */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease; /* Prepara la imagen para un efecto si lo deseas después */
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+footer {
+    display: flex;
+    justify-content: space-around; /* Separa las columnas equitativamente */
+    flex-wrap: wrap; /* Permite que se acomoden si la pantalla es pequeña */
+    padding: 4rem 5%;
+    background-color: var(--fondo-secundario);
+    border-top: 1px solid #333;
+    margin-top: 3rem;
+}
+
+.footer-columna {
+    margin-bottom: 2rem;
+    min-width: 200px; /* Evita que las columnas se aplasten demasiado */
+}
+
+/* Estilos para los títulos del footer */
+.footer-columna h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--dorado);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-columna h4 {
+    color: var(--dorado);
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+/* Estilo para el párrafo descriptivo */
+.footer-columna p {
+    color: var(--color-texto-mutado);
+    font-size: 0.9rem;
+    max-width: 300px;
+}
+
+/* Quitar viñetas de las listas */
+.footer-columna ul {
+    list-style: none;
+}
+
+.footer-columna ul li {
+    margin-bottom: 0.8rem;
+}
+
+/* ¡Adiós enlaces azules! */
+.footer-columna a {
+    text-decoration: none; /* Quita el subrayado */
+    color: var(--color-texto-mutado);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Efecto dorado al pasar el cursor */
+.footer-columna a:hover {
+    color: var(--dorado);
+}
+
+/* --- REPRODUCTOR DE AUDIO --- */
+.zona-audio {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    border-left: 4px solid var(--dorado);
+    animation: aparecer 0.5s ease-in-out;
+}
+
+.texto-reproduciendo {
+    font-size: 0.9rem !important;
+    color: var(--color-texto-mutado) !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.texto-reproduciendo span {
+    color: var(--dorado);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+audio {
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE GENERAL IA
+   ========================================= */
+
+/* Se aplica solo cuando la pantalla es de 768px de ancho o menos */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajuste del Encabezado y Menú */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* 2. Ajuste de la Sección Hero */
+    .hero {
+        padding: 4rem 1rem; /* Menos espacio arriba y abajo */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Título más pequeño para móviles */
+    }
+
+    /* 3. Ajuste de las Estadísticas (En cuadrícula de 2x2) */
+    .estadisticas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+    /* 4. Ajuste de los Equipos */
+    .seccion-equipos {
+        padding: 4rem 1rem;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 2rem;
+    }
+
+    /* 5. Ajuste de la Galería (Tarjetas más chicas) */
+    .seccion-galeria {
+        padding: 4rem 1rem;
+    }
+
+    .card {
+        width: 280px; /* Reducimos el ancho para que quepa en celulares */
+        min-height: 220px;
+    }
+
+    .group {
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+    /* 6. Ajuste de la Sección de Formatos (Apilados) */
+    .seccion-formatos {
+        flex-direction: column; /* Apila la columna izquierda y derecha */
+        padding: 4rem 1rem;
+        gap: 3rem;
+    }
+
+    .columna-izquierda h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* 7. Ajuste del Pie de Página */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .footer-columna p {
+        margin: 0 auto; /* Centra el texto del párrafo en el footer */
+    }
+}
