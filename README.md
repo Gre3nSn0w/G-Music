@@ -26,7 +26,7 @@ Este proyecto fue desarrollado para demostrar la implementación de maquetación
 
 ---
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 <img width="1366" height="768" alt="imagen" src="https://github.com/user-attachments/assets/41081f31-13fe-4c21-82a6-b5732cabbf9c" />
 
 
