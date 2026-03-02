@@ -32,7 +32,7 @@ Este proyecto fue desarrollado para demostrar la implementación de maquetación
 
 ## Autor
 
-**Fernando Hernandez Llanos (GrE3nSn0w)**
+**Fernando Hernandez Llanos (Gre3nSn0w)**
 * Estudiante de Ingeniería en Comunicaciones y Electrónica
 * IPN - ESIME Zacatenco | Grupo 8CV11 (Computación)
 * [Perfil de GitHub](https://github.com/GrE3nSn0w)
