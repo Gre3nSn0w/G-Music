@@ -405,7 +405,7 @@ footer {
     margin-bottom: 0.8rem;
 }
 
-/* No subrayar enlaces */
+/* No subrayar enlaces   */
 .footer-columna a {
     text-decoration: none; /* Quita el subrayado */
     color: var(--color-texto-mutado);
@@ -449,4 +449,90 @@ audio {
 @keyframes aparecer {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   DISEÑO FULL RESPONSIVE 
+   ========================================= */
+
+/* Se aplica solo cuando la pantalla es de 768px de ancho o menos */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajuste del Encabezado y Menú */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* 2. Ajuste de la Sección Hero */
+    .hero {
+        padding: 4rem 1rem; /* Menos espacio arriba y abajo */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Título más pequeño para celulares */
+    }
+
+    /* 3. Ajuste de las Estadísticas (En cuadrícula de 2x2) */
+    .estadisticas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+    /* 4. Ajuste de los Equipos */
+    .seccion-equipos {
+        padding: 4rem 1rem;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 2rem;
+    }
+
+    /* 5. Ajuste de la Galería */
+    .seccion-galeria {
+        padding: 4rem 1rem;
+    }
+
+    .card {
+        width: 280px; /* Reducimos el ancho para que quepa en celulares */
+        min-height: 220px;
+    }
+
+    .group {
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+    /* 6. Ajuste de la Sección de Formatos (Apilados) */
+    .seccion-formatos {
+        flex-direction: column; /* Apila la columna izquierda y derecha */
+        padding: 4rem 1rem;
+        gap: 3rem;
+    }
+
+    .columna-izquierda h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* 7. Ajuste del Pie de Página */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem;
+        gap: 2rem;
+    }
+
+    .footer-columna p {
+        margin: 0 auto; /* Centra el texto del párrafo en el footer */
+    }
 }
