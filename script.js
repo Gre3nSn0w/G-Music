@@ -5,7 +5,7 @@ const datosFormatos = {
         descripcion: 'Compresión sin pérdida. Calidad de CD o superior, ideal para sistemas de alta fidelidad con el menor compromiso de espacio.',
         fidelidad: '100%',
         compatibilidad: '90%',
-        /* Reproductor para FLAC */
+        /* Reproductor FLAC */
         reproductorHtml: `
             <div class="zona-audio">
                 <p class="texto-reproduciendo">🎶 Reproduciendo: <span>Makoto Matsushita - September Rain.flac</span></p>
@@ -35,7 +35,7 @@ const datosFormatos = {
         descripcion: 'Compresión con pérdida. Práctico pero descarta detalles para sistemas Hi-Fi.',
         fidelidad: '42%',
         compatibilidad: '100%',
-        /* Reproductor añadido para MP3 */
+        /* Reproductor MP3 */
         reproductorHtml: `
             <div class="zona-audio">
                 <p class="texto-reproduciendo">🎶 Reproduciendo: <span>Daft Punk - Get Lucky.mp3</span></p>
@@ -48,15 +48,14 @@ const datosFormatos = {
     }
 };
 
-// 2. Seleccionamos los elementos del DOM que vamos a manipular
+// 2. Seleccionamos los elementos del document 
 const itemsMenu = document.querySelectorAll('.formato-item');
 const contenedorDetalle = document.getElementById('detalle-formato');
 
-// 3. Función para actualizar la interfaz (usando Template Literals de ES6)
+// 3. Función para actualizar la interfaz
 const actualizarDetalle = (claveFormato) => {
     const datos = datosFormatos[claveFormato];
-    
-    // Inyectamos el nuevo HTML basado en la selección
+
     contenedorDetalle.innerHTML = `
         <h3>${datos.titulo}</h3>
         <p>${datos.descripcion}</p>
@@ -94,7 +93,7 @@ itemsMenu.forEach(item => {
         // Añadimos la clase 'activo' solo al elemento clicado
         item.classList.add('activo');
         
-        // Obtenemos el texto del elemento (ej. "FLAC (Lossless)") y actualizamos
+        // Obtenemos el texto del elemento (ej. "FLAC (Lossless)") y se actualiza
         const clave = item.textContent.trim();
         actualizarDetalle(clave);
     });

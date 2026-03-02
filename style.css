@@ -77,13 +77,11 @@ nav a:hover {
     text-align: center;
     padding: 6rem 1rem;
     border-bottom: 1px solid #333;
-    
-    /* --- NUEVAS PROPIEDADES --- */
-    /* Imagen de fondo (reemplaza 'imagenes/mi_imagen_hero.jpg' con la ruta de tu imagen) */
+    /* Imagen de fondo*/
     background-image: 
-        /* Capa negra encima con opacidad (el 'blur' o filtro) al 75% */
+        /* Capa negra encima con opacidad 'blur' al 75% */
         linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        /* Tu imagen de fondo debajo */
+        /* Imagen de fondo que esta por debajo */
         url('imagenes/audiop.jpg');
     background-size: cover;      /* Cubre todo el contenedor */
     background-position: center; /* Centra la imagen */
@@ -365,7 +363,7 @@ nav a:hover {
 footer {
     display: flex;
     justify-content: space-around; /* Separa las columnas equitativamente */
-    flex-wrap: wrap; /* Permite que se acomoden si la pantalla es pequeña */
+    flex-wrap: wrap; /* Se ve bien si la pantalla es pequeña */
     padding: 4rem 5%;
     background-color: var(--fondo-secundario);
     border-top: 1px solid #333;
@@ -374,7 +372,7 @@ footer {
 
 .footer-columna {
     margin-bottom: 2rem;
-    min-width: 200px; /* Evita que las columnas se aplasten demasiado */
+    min-width: 200px; /* Evita que las columnas se traslapen */
 }
 
 /* Estilos para los títulos del footer */
@@ -407,7 +405,7 @@ footer {
     margin-bottom: 0.8rem;
 }
 
-/* ¡Adiós enlaces azules! */
+/* No subrayar enlaces */
 .footer-columna a {
     text-decoration: none; /* Quita el subrayado */
     color: var(--color-texto-mutado);
@@ -451,90 +449,4 @@ audio {
 @keyframes aparecer {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================================
-   DISEÑO RESPONSIVE GENERAL IA
-   ========================================= */
-
-/* Se aplica solo cuando la pantalla es de 768px de ancho o menos */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Ajuste del Encabezado y Menú */
-    header {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    /* 2. Ajuste de la Sección Hero */
-    .hero {
-        padding: 4rem 1rem; /* Menos espacio arriba y abajo */
-    }
-
-    .hero h1 {
-        font-size: 2.2rem; /* Título más pequeño para móviles */
-    }
-
-    /* 3. Ajuste de las Estadísticas (En cuadrícula de 2x2) */
-    .estadisticas {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        padding: 3rem 1rem;
-    }
-
-    /* 4. Ajuste de los Equipos */
-    .seccion-equipos {
-        padding: 4rem 1rem;
-    }
-
-    .encabezado-seccion h2 {
-        font-size: 2rem;
-    }
-
-    /* 5. Ajuste de la Galería (Tarjetas más chicas) */
-    .seccion-galeria {
-        padding: 4rem 1rem;
-    }
-
-    .card {
-        width: 280px; /* Reducimos el ancho para que quepa en celulares */
-        min-height: 220px;
-    }
-
-    .group {
-        gap: 15px;
-        padding-right: 15px;
-    }
-
-    /* 6. Ajuste de la Sección de Formatos (Apilados) */
-    .seccion-formatos {
-        flex-direction: column; /* Apila la columna izquierda y derecha */
-        padding: 4rem 1rem;
-        gap: 3rem;
-    }
-
-    .columna-izquierda h2 {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
-    /* 7. Ajuste del Pie de Página */
-    footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 3rem 1rem;
-        gap: 2rem;
-    }
-
-    .footer-columna p {
-        margin: 0 auto; /* Centra el texto del párrafo en el footer */
-    }
 }
